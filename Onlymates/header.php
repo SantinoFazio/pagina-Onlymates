@@ -41,7 +41,7 @@
            </li>
               <li class="nav-item "> <a class="link" href="curado.php">Curado</a></li>
               <li class="nav-item  bajar"> <a href="Carrito2/carrito.php"><img src="img/carrito.png" alt="" ></a></li>
-              <li class="nav-item bajar"> <a  href="login/login.php"><img  src="img/cuenta.png" alt="" ></a></li>  
+              <li class="nav-item bajar"> <a  href="login/ingresar.php"><img  src="img/cuenta.png" alt="" ></a></li>  
         </ul>
         <div class="hamburger">
           <span class="bar"></span>

@@ -1,28 +1,18 @@
 <?php
 
+
+
+session_start();
+
+// Verificar si el usuario ya ha iniciado sesión y redirigir si es necesario
+if (isset($_SESSION['ID']) && basename($_SERVER['PHP_SELF']) == "ingresar.php") {
+  header("Location: logueado.php");
+  exit();
+}
 include_once 'header.php';
-session_start( );
+
 ?>
-
-<style>
-form{ float: left; width: 45%;}
-</style>
-
-
-<?php
-if( isset($_GET['alta'])){
-	echo 'ya podes iniciar sesion';
-}
-if (isset($_GET['login'])) {
-	?>
-	<div>
-		<p class="mal ingresado los datos">Mal tu usuario o tu clave</p>
-	</div>
-	<?php  
-}
-  
-//var_dump($_SESSION);
-?>
+ 
 <div id="bajarFormulario">
   <div class="form-container">
     <div class="login">

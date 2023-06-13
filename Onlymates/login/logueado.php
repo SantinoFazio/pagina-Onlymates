@@ -1,6 +1,6 @@
 <?php
-include_once 'header.php';
 session_start( );
+include_once 'header.php';
 
 if( !isset( $_SESSION['ID'] ) ){
 	header("Location: ../index.php?forbidden=1");

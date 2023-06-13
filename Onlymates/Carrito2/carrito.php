@@ -133,6 +133,8 @@ Como pueden ver, hace href a la acción "quitar" que armamos arriba, y le pasa t
 ?>
 </div>
 
+
+
 <div class="">
     <div class="col-7">
       <?php
