@@ -50,5 +50,5 @@
         </div>
         <a href="#" class="nav-branding "><img class="logoNav" src="../img/logo.png" class="" alt="" ></a>
       </nav>
-   <script src="script.js"></script>
+   <script src="../script.js"></script>
  </header>

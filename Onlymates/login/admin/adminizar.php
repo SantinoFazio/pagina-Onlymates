@@ -3,7 +3,7 @@ include_once 'header.php';
 
 $id = $_GET['id'];
 
-$cnx = mysqli_connect('localhost','root','','carrito');
+$cnx = mysqli_connect('localhost','root','','basedatos');
 
 
 $c = "UPDATE usuarios SET NIVEL='Admin' WHERE ID='$id'";

@@ -88,7 +88,7 @@ Finalmente, hay un botón con un "submit" que toma la cantidad del producto, y l
 	?>
 		<div class="item-producto">
 			<form method="post" action="catalogo.php?accion=meter&codigo=<?php echo $array_productos[$clave]["codigo"]; ?>">
-			<div ><img  class="product-image" src="<?php echo $array_productos[$clave]["imagen"]; ?>"></div>
+			<div ><img  class="product-image" src="<?php echo  $array_productos[$clave]["imagen"]; ?>"></div>
 			<div class="product-tile-footer">
 			<div class="product-title"><?php echo $array_productos[$clave]["nombre"]; ?></div>
 			<div class="product-price"><?php echo "$".$array_productos[$clave]["precio"]; ?></div>

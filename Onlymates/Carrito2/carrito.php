@@ -105,7 +105,7 @@ Como pueden ver, hace href a la acción "quitar" que armamos arriba, y le pasa t
 				<td style="text-align:right;"><?php echo $item["cantidad"]; ?></td>
 				<td  style="text-align:right;"><?php echo "$ ".$item["precio"]; ?></td>
 				<td  style="text-align:right;"><?php echo "$ ". number_format($item_precio,2); ?></td>
-				<td style="text-align:center;"><a href="index.php?accion=quitar&codigo=<?php echo $item["codigo"]; ?>" class="botonQuitarAccion"><img src="icon-delete.png" alt="Quitar item" /></a></td>
+				<td style="text-align:center;"><a href="carrito.php?accion=quitar&codigo=<?php echo $item["codigo"]; ?>" class="botonQuitarAccion"><img src="icon-delete.png" alt="Quitar item" /></a></td>
 				</tr>
 				<?php
                 //$cantidad_total suma las cantidades entre los distintos productos. Si tenemos 2 manzanas y 1 naranja, entonces haría 2+1

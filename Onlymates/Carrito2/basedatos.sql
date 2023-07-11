@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-06-2023 a las 14:58:44
+-- Tiempo de generación: 19-06-2023 a las 15:51:15
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -32,7 +32,6 @@ CREATE TABLE `mates` (
   `nombre` varchar(45) DEFAULT NULL,
   `precio` float DEFAULT NULL,
   `codigo` varchar(45) DEFAULT NULL,
-  `descripcion` varchar(200) DEFAULT NULL,
   `imagen` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -40,8 +39,35 @@ CREATE TABLE `mates` (
 -- Volcado de datos para la tabla `mates`
 --
 
-INSERT INTO `mates` (`id_mate`, `nombre`, `precio`, `codigo`, `descripcion`, `imagen`) VALUES
-(1, 'torpedo', 5000, 'T01', 'TORPEDO pieza con acabados con alpaca y acero,cuero de excelente calidad con refuezo en las patas. mate de calidad y estetica admirable.', 'torpedo.png');
+INSERT INTO `mates` (`id_mate`, `nombre`, `precio`, `codigo`, `imagen`) VALUES
+(1, 'TORPEDO', 5000, 'T01', 'imgs/torpedo.png'),
+(2, 'IMPERIAL', 7000, 'IM01', 'imgs/imperial.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `ID` int(8) UNSIGNED NOT NULL,
+  `NOMBRE` varchar(100) DEFAULT NULL,
+  `APELLIDO` varchar(100) DEFAULT NULL,
+  `EMAIL` varchar(100) NOT NULL,
+  `CLAVE` varchar(100) DEFAULT NULL,
+  `NIVEL` varchar(100) DEFAULT NULL,
+  `FECHA_ALTA` datetime DEFAULT NULL,
+  `ESTADO` enum('activo','banneado') NOT NULL DEFAULT 'activo'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`ID`, `NOMBRE`, `APELLIDO`, `EMAIL`, `CLAVE`, `NIVEL`, `FECHA_ALTA`, `ESTADO`) VALUES
+(1, 'Santino', 'Fazio', 'tatofa43@gmail.com', '1234', 'Admin', '2014-11-06 21:35:46', 'activo'),
+(7, 'tato', 'FAZIO', 'santino.fazio@davinci.edu.ar', '827ccb0eea8a706c4c34a16891f84e7b', 'Admin', '2022-12-08 11:08:42', 'activo'),
+(8, 'tato', 'FAZIO', 'aaa@gm.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Admin', '2022-12-10 20:46:40', 'activo');
 
 --
 -- Índices para tablas volcadas
@@ -61,7 +87,7 @@ ALTER TABLE `mates`
 -- AUTO_INCREMENT de la tabla `mates`
 --
 ALTER TABLE `mates`
-  MODIFY `id_mate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_mate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

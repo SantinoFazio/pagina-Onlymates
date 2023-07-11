@@ -1,6 +1,6 @@
 <?php
 
-$cnx = mysqli_connect('localhost','root','','carrito');
+$cnx = mysqli_connect('localhost','root','','basedatos');
 
 $e = $_POST['email'];
 $c = $_POST['clave'];

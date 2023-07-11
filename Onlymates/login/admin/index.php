@@ -5,7 +5,7 @@ if (!isset($_SESSION['NIVEL']) || $_SESSION['NIVEL'] != 'Admin') {
     die('NO TENES PERMISOS');
 }
 
-$cnx = mysqli_connect('localhost', 'root', '', 'carrito');
+$cnx = mysqli_connect('localhost', 'root', '', 'basedatos');
 
 $c = "SELECT ID,NIVEL, IFNULL(NOMBRE, '----') AS NOMBRE, ESTADO, IFNULL(APELLIDO, '----') AS APELLIDO, EMAIL, DATE_FORMAT( FECHA_ALTA, '%d/%m/%Y' ) AS FECHA FROM usuarios ORDER BY FECHA_ALTA DESC";
 $r = mysqli_query($cnx, $c);
@@ -68,6 +68,7 @@ include_once 'header.php';
 
 <div class="alinearVolverAlInicio "> 
 	<p><a href="../../index.php">VOLVER AL INICIO</a></p>
+    <p><a href="AMB/productos.php">ABM</a></p>
 </div>
 
 <div class="">

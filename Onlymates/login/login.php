@@ -2,7 +2,7 @@
 
 session_start();
 
-$cnx = mysqli_connect('localhost','root','','carrito');
+$cnx = mysqli_connect('localhost','root','','basedatos');
 
 $email = $_POST['email'];
 $clave = $_POST['clave'];
