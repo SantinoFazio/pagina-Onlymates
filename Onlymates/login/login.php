@@ -21,7 +21,6 @@ if ($a == NULL) {
     $_SESSION['EMAIL'] = $a['EMAIL'];
     $_SESSION['ID'] = $a['ID'];
     $_SESSION['NIVEL'] = $a['NIVEL'];
-    
     header("Location: logueado.php");
     exit(); // Agregar exit() después de redireccionar para detener la ejecución posterior
 }
